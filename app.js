@@ -19,8 +19,8 @@ app.use(
 app.use(express.json());
 
 const PORT = 4001;
-
-const mongoURL = `mongodb://localhost:27017/thinhphat`;
+const mongoURL = `mongodb+srv://nhansunday:${process.env.AUTH_MONGO}@cluster0.uzqlaxy.mongodb.net/thinhphat-test`;
+//console.log(mongoURL);
 mongoose.connect(mongoURL).then(
   () => console.log('Connected Database'),
   (err) => {
