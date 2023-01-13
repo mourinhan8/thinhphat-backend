@@ -5,6 +5,7 @@ import router from './routes';
 import mongoose, { MongooseOptions } from 'mongoose';
 import cors from 'cors';
 import logger from 'morgan';
+import compression from 'compression';
 
 const app = express();
 
