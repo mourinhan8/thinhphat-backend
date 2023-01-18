@@ -1,15 +1,14 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
 import express from 'express';
 import router from './routes';
 import mongoose, { MongooseOptions } from 'mongoose';
 import cors from 'cors';
 import logger from 'morgan';
 import compression from 'compression';
+import { AUTH_MONGO } from './config';
 
 const app = express();
 
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: '*', allowedHeaders: ['Content-Type', 'Authorization'] }));
 
 app.use(
   express.urlencoded({
@@ -20,7 +19,7 @@ app.use(
 app.use(express.json());
 
 const PORT = 4001;
-const mongoURL = `mongodb+srv://nhansunday:${process.env.AUTH_MONGO}@cluster0.uzqlaxy.mongodb.net/thinhphat-test`;
+const mongoURL = `mongodb+srv://nhansunday:${AUTH_MONGO}@cluster0.uzqlaxy.mongodb.net/thinhphat-test`;
 //console.log(mongoURL);
 mongoose.connect(mongoURL).then(
   () => console.log('Connected Database'),

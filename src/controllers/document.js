@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import { body, query, validationResult } from 'express-validator';
 import mongoose, { Mongoose } from 'mongoose';
 import cDocument from '../services/document';

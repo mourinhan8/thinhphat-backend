@@ -5,55 +5,55 @@ const documentSchema = new Schema(
   {
     ward: {
       type: String,
-      required: false,
+      required: true,
     },
     document_name: {
       type: String,
-      required: false,
+      required: true,
     },
     received_date: {
       type: Date,
-      required: false,
+      required: true,
     },
     phone_number: {
       type: Number,
-      required: false,
+      required: true,
     },
     page_number: {
       type: Number,
-      require: false,
+      require: true,
     },
     current_area: {
       type: String,
-      require: false,
+      require: true,
     },
     number_certificate: {
       type: String,
-      require: false,
+      require: true,
     },
     main_person: {
       type: String,
-      require: false,
+      require: true,
     },
     sub_person: {
       type: String,
-      require: false,
+      require: true,
     },
     measure_date: {
       type: Date,
-      require: false,
+      require: true,
     },
     appraisal_date: {
       type: Date,
-      require: false,
+      require: true,
     },
     appraiser: {
       type: String,
-      require: false,
+      require: true,
     },
     note: {
       type: String,
-      require: false,
+      require: true,
     },
     status: {
       type: Number,
